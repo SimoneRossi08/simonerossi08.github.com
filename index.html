@@ -3,15 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ASEA</title>
-  <!-- Reindirizza subito alla cartella ASEA -->
-  <meta http-equiv="refresh" content="0; url=ASEA/">
-  <link rel="canonical" href="ASEA/">
-  <script>
-    window.location.replace("ASEA/");
-  </script>
+  <title>Menu</title>
+  <style>
+    :root {
+      --bg: #f3f5f2;
+      --ink: #1d2a24;
+      --muted: #5d6b64;
+      --line: #cfd8d2;
+      --accent: #1f6f55;
+      --accent-ink: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101714;
+        --ink: #e6eee9;
+        --muted: #93a39b;
+        --line: #2a3832;
+        --accent: #4fc39a;
+        --accent-ink: #0b1411;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    main { width: 100%; max-width: 520px; }
+    h1 {
+      font-size: clamp(2.6rem, 9vw, 4rem);
+      margin: 0 0 8px;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+    }
+    p.sub { margin: 0 0 32px; color: var(--muted); font-size: 1.05rem; }
+    nav { border-top: 1px solid var(--line); }
+    nav a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 18px 4px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1.25rem;
+    }
+    nav a span { color: var(--muted); font-size: 0.95rem; }
+    nav a:hover, nav a:focus-visible { background: var(--accent); color: var(--accent-ink); outline: none; }
+    nav a:hover span, nav a:focus-visible span { color: var(--accent-ink); }
+  </style>
 </head>
 <body>
-  <p>Reindirizzamento in corso… Se non succede nulla, <a href="ASEA/">clicca qui</a>.</p>
+  <main>
+    <h1>Menu</h1>
+    <p class="sub">Scegli una sezione.</p>
+    <nav>
+      <a href="ASEA/hompage/homepage.html">ASEA <span>Vai alla sezione</span></a>
+      <!-- Aggiungi le altre sezioni copiando la riga sopra, ad esempio:
+      <a href="NOME-CARTELLA/pagina.html">Altra sezione <span>Descrizione</span></a>
+      -->
+    </nav>
+  </main>
 </body>
 </html>
